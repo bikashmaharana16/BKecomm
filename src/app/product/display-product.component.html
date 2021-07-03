@@ -1,0 +1,17 @@
+<div>
+    Display products
+</div>
+
+<div class="row">
+    <div class="col-3" *ngFor="let p of products">
+        <a [routerLink]="['/productDetail',p.id]">
+            <div class="card shadow mt-5">
+                <img class="card-img-top" [src]="p.imageUrl" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">{{p.name}}</h4>
+                    <p class="card-text">{{p.price}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
